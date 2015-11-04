@@ -23,7 +23,7 @@ source-repository head
   location: git://github.com/derekelkins/nullary.git
 
 library
-  exposed-modules:     Class.Nullary, Class.Partial, Class.Unsafe
+  exposed-modules:     Type.Class.Nullary, Type.Class.Partial, Type.Class.Unsafe
   -- other-modules:       
   other-extensions:    FlexibleContexts, MultiParamTypeClasses, Rank2Types, ScopedTypeVariables, UndecidableInstances
   build-depends:       base >=4.8 && <4.9

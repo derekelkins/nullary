@@ -5,7 +5,7 @@
 {-# LANGUAGE UndecidableInstances #-}
 ----------------------------------------------------------------------------
 -- |
--- Module     : Class.Nullary
+-- Module     : Type.Class.Nullary
 -- Copyright  : 2015 Derek Elkins
 -- License    : BSD2
 --
@@ -48,7 +48,7 @@
 -- > head :: Partial => [a] -> a
 -- > head (x:xs) = x
 -------------------------------------------------------------------------------
-module Class.Nullary ( 
+module Type.Class.Nullary ( 
     Tag, 
     unsafeTag,
     Proxy(..) -- re-exported for convenience
