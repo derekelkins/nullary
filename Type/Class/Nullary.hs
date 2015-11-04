@@ -22,6 +22,7 @@
 -- To define a nullary type class, you use the following pattern:
 --
 -- > -- The following four extensions are necessary.
+-- > -- Users do not need these extensions.
 -- > {-# LANGUAGE FlexibleContexts #-}
 -- > {-# LANGUAGE MultiParamTypeClasses #-}
 -- > {-# LANGUAGE Rank2Types #-}
@@ -66,7 +67,7 @@ newtype MagicTag t r = MagicTag (Tag t => r)
 -- | Unsafely cast off the Tag constraint.  This should only
 -- be used at the "top-level" of an application.  In practice, 
 -- specializations of this should be provided, e.g. unsafeUnsafe.
--- This uses the same evil as Data.Reflect.
+-- This uses the same evil as Data.Reflection.
 unsafeTag :: forall r t. Proxy t -> (Tag t => r) -> r
 unsafeTag Proxy f = unsafeCoerce (MagicTag f :: MagicTag t r) ()
 {-# INLINE unsafeTag #-}
